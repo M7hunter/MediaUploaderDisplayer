@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <!-- image displayer -->
+    <androidx.cardview.widget.CardView
+            android:id="@+id/image_container"
+            android:layout_width="wrap_content"
+            app:cardBackgroundColor="@android:color/white"
+            android:layout_margin="@dimen/margin_s"
+            app:cardCornerRadius="@dimen/margin_m"
+            app:cardElevation="@dimen/margin_m"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        <ImageView
+                android:id="@+id/iv_display_picked_media"
+                tools:src="@drawable/ic_launcher_foreground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <ProgressBar
+                android:id="@+id/pb_upload"
+                android:visibility="gone"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_height="wrap_content"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- btns -->
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <!-- confirm uploading -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fbtn_confirm_upload"
+                android:layout_margin="@dimen/margin_l"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_upload"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:layout_height="wrap_content"/>
+
+        <!-- cancel uploading -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fbtn_cancel_upload"
+                android:layout_margin="@dimen/margin_l"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_close"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>
